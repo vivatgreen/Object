@@ -6,16 +6,16 @@ public class Main {
         Author stephenKing  = new Author ("Stephen", "King");
         Book firstBook = new Book ("Desperation", stephenKing, 1997);
 
-        Author levTolstoi  = new Author("Толстой", "Лев");
+        Author levTolstoi  = new Author("Лев", "Толстой");
         Book secondBook = new Book("Война и мир", levTolstoi, 1869);
 
-        System.out.println (firstBook.getName() + " " + firstBook.getYear()+ " " + firstBook.getAuthor());
-        System.out.println (secondBook.getName() + " " + secondBook.getYear()+ " " + secondBook.getAuthor());
+        System.out.println (firstBook.getName() + " " + firstBook.getAuthor().getAuthorName() + " " + firstBook.getAuthor().getSurname()
+                + " " + firstBook.getYear());
 
+        System.out.println (secondBook.getName() + " " + secondBook.getAuthor().getAuthorName() + " " + secondBook.getAuthor().getSurname()
+                + " " + secondBook.getYear());
 
-        System.out.println ("firstBook = " + firstBook);
-        System.out.println ("secondBook = " + secondBook);
         secondBook.setYear (1846);
-        System.out.println ("secondBook.getYear() = " + secondBook.getYear());
+        System.out.println("secondBook.getYear() = " + secondBook.getYear());
     }
-    }
+}
